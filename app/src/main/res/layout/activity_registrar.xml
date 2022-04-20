@@ -116,7 +116,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="89dp"
-        android:layout_marginBottom="41dp"
+        android:layout_marginBottom="24dp"
         android:backgroundTint="#575DFB"
         android:fontFamily="@font/avenir_black"
         android:text="Registrarse"

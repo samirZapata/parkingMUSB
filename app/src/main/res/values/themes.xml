@@ -22,4 +22,12 @@
     <style name="Theme.ParkingMUSB.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.ParkingMUSB.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="BottonNavigation">
+        <item name="android:background">@color/green_dark</item>
+        <item name="itemIconTint">@color/green_light_2</item>
+        <item name="itemTextColor">@color/green_light_2</item>
+    </style>
+
 </resources>

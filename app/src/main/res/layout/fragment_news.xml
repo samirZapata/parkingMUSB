@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".newsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="110dp"
+        android:textColor="#575DFB"
+        android:fontFamily="@font/avenir_black"
+        android:textSize="30dp"
+        android:text="Top News" />
+
+    <TextView
+        android:id="@+id/noticeOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="200dp"
+        android:width="260dp"
+        android:height="100dp"
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="16dp"
+        android:text="Noticia numero 1 \nLorem ipsum es el texto que se usa\npara completar diseños porque no se tiene un texto real para la parte de diseño\nLeer mas..."
+        />
+
+    <TextView
+        android:id="@+id/noticeTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="320dp"
+        android:width="260dp"
+        android:height="100dp"
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="16dp"
+        android:text="Noticia numero 2 \nLorem ipsum es el texto que se usa\npara completar diseños porque no se tiene un texto real para la parte de diseño\nLeer mas..."
+        />
+
+    <TextView
+        android:id="@+id/noticeThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="440dp"
+        android:width="260dp"
+        android:height="100dp"
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="16dp"
+        android:text="Noticia numero 3 \nLorem ipsum es el texto que se usa\npara completar diseños porque no se tiene un texto real para la parte de diseño\nLeer mas..."
+        />
+
+    <ImageButton
+        android:id="@+id/imgUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/perfilrounded"
+        android:contentDescription="@string/app_name"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:src="@drawable/perfil" />
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="30dp"
+        android:text="Bienvenido"
+        android:textColor="#A9A9AA"
+        android:fontFamily="@font/avenir_roman"
+        android:textSize="12dp"
+
+        />
+
+    <TextView
+        android:id="@+id/txtUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="45dp"
+        android:text="Nombre de usuario"
+        android:textColor="#19104E"
+        android:textSize="16sp"
+        android:fontFamily="@font/avenir_roman"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnNotification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:backgroundTint="#f5f5ff"
+        app:borderWidth="0dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/notification" />
+
+</FrameLayout>

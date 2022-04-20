@@ -3,29 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/home"
         android:enabled="true"
-        android:title="home"
+        android:title="Home"
         android:icon="@drawable/mhome"
-        app:showAsAction="ifRoom"
-        />
 
+        />
     <item android:id="@+id/park"
         android:enabled="true"
-        android:title="park"
+        android:title="Parqueadero"
         android:icon="@drawable/mlocation"
-        app:showAsAction="ifRoom"
-        />
 
+        />
     <item android:id="@+id/news"
         android:enabled="true"
-        android:title="news"
+        android:title="Novedades"
         android:icon="@drawable/mnews"
-        app:showAsAction="ifRoom"
-        />
 
+        />
     <item android:id="@+id/profile"
+
         android:enabled="true"
-        android:title="profile"
+        android:title="Perfil"
         android:icon="@drawable/mprofile"
-        app:showAsAction="ifRoom"
+
     />
 </menu>
