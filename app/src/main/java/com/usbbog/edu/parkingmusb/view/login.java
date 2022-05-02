@@ -78,7 +78,7 @@ public class login extends AppCompatActivity {
                     if(txtUser.getText().toString().equals(jsonObject.getString("user")) &&
                             txtPass.getText().toString().equals(jsonObject.getString("pass"))){
                         if (per_usuario1.equals(jsonObject.getString("tipoUser"))) {
-                            Intent j = new Intent(login.this, vigilante.class);
+                            Intent j = new Intent(login.this, listarUsers.class);
                             //j.putExtra("nombre", jsonObject.getString("nombre"));
                             startActivity(j);
                         }

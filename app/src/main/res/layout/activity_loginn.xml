@@ -100,29 +100,34 @@
 
     <EditText
         android:id="@+id/txtUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="63dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="101dp"
+        android:layout_marginStart="76dp"
         android:layout_marginBottom="240dp"
         android:ems="10"
+        android:hint="Usuario"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Name" />
+        android:fontFamily="@+font/avenir_roman"
+
+        />
 
     <EditText
         android:id="@+id/txtPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="255dp"
+        android:layout_height="63dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="166dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:fontFamily="@font/avenir_roman"
+        />
 
 
 </RelativeLayout>

@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ParkingMUSB">
         <activity
-            android:name=".vigilante"
+            android:name=".listarUsers"
             android:exported="false" />
         <activity
             android:name=".misvehiculos"
