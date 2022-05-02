@@ -7,11 +7,7 @@
     tools:context=".HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:src="@drawable/homegruop" />
+
 
     <TextView
         android:layout_width="match_parent"
@@ -34,10 +30,10 @@
         android:layout_marginTop="410dp"
         android:background="@drawable/roundcorner"
         android:contentDescription="@string/action_sign_in_short"
-        android:src="@drawable/news" />
+        android:src="@drawable/mycars" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRegistrarVh"
         android:layout_width="263dp"
         android:layout_height="69dp"
         android:layout_marginStart="69dp"
@@ -93,6 +89,37 @@
         app:borderWidth="0dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/notification" />
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/vector_2" />
+
+    <ImageView
+        android:id="@+id/imageView36"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/vector_1" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="365dp"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/vector" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/vector_4" />
 
 
 </FrameLayout>

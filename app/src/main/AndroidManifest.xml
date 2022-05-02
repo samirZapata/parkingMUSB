@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.usbbog.edu.parkingmusb.view" >
+    package="com.usbbog.edu.parkingmusb.view">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
+        android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.ParkingMUSB" >
+        android:theme="@style/Theme.ParkingMUSB">
+        <activity
+            android:name=".vigilante"
+            android:exported="false" />
+        <activity
+            android:name=".misvehiculos"
+            android:exported="false" />
+        <activity
+            android:name=".registrarvehiculo"
+            android:exported="false" />
         <activity
             android:name=".registrar"
             android:exported="false" />
@@ -19,11 +33,14 @@
         <activity
             android:name=".login"
             android:exported="false" />
-
+        <activity
+            android:name=".HomeFragment"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
         <activity
             android:name=".main"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
