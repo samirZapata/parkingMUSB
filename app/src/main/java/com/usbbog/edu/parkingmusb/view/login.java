@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -26,10 +27,11 @@ public class login extends AppCompatActivity {
     public static final String nombre ="nombre";
     static EditText txtUser, txtPass;
     Button bLogin;
+    TextView btnIrRegistrar;
     String per_usuario1 ="1";
     String per_usuario2 ="2";
-    final static String IP = "192.168.0.4";
-    final static String IPUSB = "172.17.3.209";
+    final static String IP = "192.168.0.7";
+    final static String IPUSB = "172.17.3.72";
     final static String sitio = "CRUD";
     RequestQueue requestQueue;
 
@@ -58,16 +60,22 @@ public class login extends AppCompatActivity {
         txtPass = (EditText) findViewById(R.id.txtPass);
 
         bLogin = (Button) findViewById(R.id.btnIniciarSesion);
+        btnIrRegistrar = (TextView) findViewById(R.id.btnIrRegistrar);
+        btnIrRegistrar.setOnClickListener(v ->
+                registrar());
         bLogin.setOnClickListener(v ->
-                loginUsuario("http://"+IP+"/"+sitio+"/"+"login.php?user="+txtUser.getText().toString()+
+                loginUsuario("http://"+IPUSB+"/"+sitio+"/"+"login.php?user="+txtUser.getText().toString()+
                         "&pass="+txtPass.getText().toString()));
 
-                /*loginUsuario("http://"+IPUSB+"/"+sitio+"/"+"loginy.php?user="+edUsuario.getText().toString()+
-                "&pass="+edClave.getText().toString()));*/
+                /*loginUsuario("http://"+IPUSB+"/"+sitio+"/"+"login.php?user="+txtUser.getText().toString()+
+                "&pass="+txtPass.getText().toString()));*/
 
 
     }
-
+    public void registrar(){
+       Intent i=new Intent(login.this,registrar.class);
+       startActivity(i);
+    }
 
     public void loginUsuario(String URL){
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(URL, response -> {
@@ -79,13 +87,13 @@ public class login extends AppCompatActivity {
                             txtPass.getText().toString().equals(jsonObject.getString("pass"))){
                         if (per_usuario1.equals(jsonObject.getString("tipoUser"))) {
                             Intent j = new Intent(login.this, listarUsers.class);
-                            //j.putExtra("nombre", jsonObject.getString("nombre"));
+                            j.putExtra("nombre", jsonObject.getString("nombre"));
                             startActivity(j);
                         }
 
                         else if(per_usuario2.equals(jsonObject.getString("tipoUser"))){
                             Intent j = new Intent(login.this, home.class);
-                            //j.putExtra("nombre", jsonObject.getString("nombre"));
+                            j.putExtra("nombre", jsonObject.getString("nombre"));
                             startActivity(j);
                         }
 

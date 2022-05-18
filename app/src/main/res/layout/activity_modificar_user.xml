@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registrar">
+    tools:context=".modificarUser">
 
 
     <EditText
@@ -86,7 +86,7 @@
         android:minHeight="48dp" />
 
     <Button
-        android:id="@+id/btnRegistrar"
+        android:id="@+id/btnEditar"
         android:layout_width="232dp"
         android:layout_height="68dp"
         android:layout_alignParentStart="true"
@@ -96,7 +96,7 @@
         android:layout_marginBottom="24dp"
         android:backgroundTint="#575DFB"
         android:fontFamily="@font/avenir_black"
-        android:text="Registrarse"
+        android:text="Editar"
         android:textSize="15dp"
         app:cornerRadius="10dp" />
 
@@ -165,47 +165,28 @@
         app:srcCompat="@drawable/subtractblue" />
 
     <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="123dp"
-        android:fontFamily="@font/avenir_black"
-        android:text="SingUp"
-        android:textColor="#5256E8"
-        android:textSize="25dp" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="125dp"
-        android:layout_marginTop="220dp"
-        android:fontFamily="@font/avenir_roman"
-        android:text="Bienvenido a"
-        android:textColor="#19104E"
-
-        android:textSize="20dp" />
-
-    <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="105dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginStart="173dp"
+        android:layout_marginTop="176dp"
         android:fontFamily="@font/avenir_black"
-        android:text="MUSB-PARKING"
+        android:gravity="center"
+        android:text="Perfil"
         android:textColor="#575DFB"
-
         android:textSize="25dp" />
+
+    <ImageView
+        android:id="@+id/imageView44"
+        android:layout_width="102dp"
+        android:layout_height="78dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="219dp"
+        app:srcCompat="@drawable/perfil" />
 
 
 </RelativeLayout>

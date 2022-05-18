@@ -17,6 +17,7 @@ public class home extends AppCompatActivity {
     newsFragment news = new newsFragment();
     profileFragment profile = new profileFragment();
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

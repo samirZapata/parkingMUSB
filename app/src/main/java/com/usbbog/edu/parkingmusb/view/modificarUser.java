@@ -17,22 +17,22 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class registrar extends AppCompatActivity {
-    EditText etId,etNombre,etApellido,etUser,etPass;
-    Button btnCrear;
+public class modificarUser extends AppCompatActivity {
+    EditText etId,etNombre,etApellido,etUser,etPass,etBorrar,etUsuario,etContraseña;
+    Button btnCrear,btnBuscar,btnBorrar,btnEditar;
 
     RequestQueue requestQueue;
-
-    private static final  String URLcrear = "http://172.17.3.72/CRUD/create.php";
+    private static final  String URLEditar = "http://172.17.3.72/CRUD/editUser.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registrar);
-
+        setContentView(R.layout.activity_modificar_user);
         requestQueue = Volley.newRequestQueue(this);
 
         etId = (EditText) findViewById(R.id.txtId);
@@ -40,60 +40,55 @@ public class registrar extends AppCompatActivity {
         etApellido = (EditText) findViewById(R.id.txtApellido);
         etUser = (EditText) findViewById(R.id.txtUser);
         etPass = (EditText) findViewById(R.id.txtPass);
-        btnCrear = (Button) findViewById(R.id.btnRegistrar);
 
-        btnCrear.setOnClickListener(new View.OnClickListener() {
+
+        btnEditar = (Button) findViewById(R.id.btnEditar);
+
+        btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CreateUser();
+                EditUser();
             }
         });
 
     }
-
-    public void CreateUser(){
-
-        //Datos del usuario
-        final String idUser = etId.getText().toString().trim(); //trim() -> elimina los espacios al comienzo y final del String
-        final String nombre = etNombre.getText().toString().trim();
-        final String apellido = etApellido.getText().toString().trim(); //trim() -> elimina los espacios al comienzo y final del String
-        final String User = etUser.getText().toString().trim();
-        final String Pass=etPass.getText().toString().trim();
-        final String tipoUser="2";
-        //Usando la implementacion Volley para conectarse a la base de datos
+    public void EditUser(){
+        String idUser = etId.getText().toString().trim();
+        String nombre = etNombre.getText().toString().trim();
+        String apellido = etApellido.getText().toString().trim();
+        String user = etUser.getText().toString().trim();
+        String pass = etPass.getText().toString().trim();
         StringRequest stringRequest = new StringRequest(
-                Request.Method.POST,//Metodo REST que se utilizara
-                URLcrear,//URL a utilizar
+                Request.Method.POST,
+                URLEditar,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(registrar.this, "Se creo correctamente", Toast.LENGTH_SHORT).show();
-                        Intent i=new Intent(registrar.this,login.class);
+                        Toast.makeText(modificarUser.this, "Actualizacion lograda", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(modificarUser.this, home.class);
                         startActivity(i);
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(registrar.this, "Error al crear", Toast.LENGTH_SHORT).show();
-                        System.out.println(error.getMessage());
+                        Toast.makeText(modificarUser.this, "Update ERROR", Toast.LENGTH_SHORT).show();
+                        System.out.println("Update ERROR: " + error.getMessage());
                     }
                 }
-        ){//Los datos que se enviaran a la base de datos
+        ){
+            @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 params.put("idUser", idUser);
                 params.put("nombre", nombre);
                 params.put("apellido", apellido);
-                params.put("user", User);
-                params.put("pass",Pass);
-                params.put("tipoUser",tipoUser);
+                params.put("user", user);
+                params.put("pass", pass);
                 return params;
             }
         };
-
-        requestQueue.add(stringRequest);//Enviar la peticion
+        requestQueue.add(stringRequest);
     }
-
 }
