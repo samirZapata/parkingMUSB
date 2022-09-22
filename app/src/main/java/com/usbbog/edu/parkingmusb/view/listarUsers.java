@@ -32,13 +32,13 @@ public class listarUsers extends AppCompatActivity {
     EditText etBorrar;
     Button btnEliminar;
 
-    final String IP="172.17.3.72";
+    final String IP="172.17.3.158";
     final String sitio="CRUD";
     RequestQueue requestQueue;
     ListView lista;
     String nombre, apellido;
     String[] elementos;
-    private static final  String URLBorrar = "http://172.17.3.72/CRUD/borrarUser.php";
+    private static final  String URLBorrar = "http://172.17.3.158/CRUD/borrarUser.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

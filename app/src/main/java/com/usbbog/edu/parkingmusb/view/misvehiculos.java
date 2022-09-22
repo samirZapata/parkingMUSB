@@ -31,13 +31,13 @@ import java.util.Map;
 public class misvehiculos extends AppCompatActivity {
     EditText etBorrar;
     Button btnEliminar;
-    final String IP="172.17.3.72";
+    final String IP="192.168.0.7";
     final String sitio="CRUD";
     RequestQueue requestQueue;
     ListView lista;
     String color, modelo,placa;
     String[] elementos;
-    private static final  String URLBorrar = "http://172.17.3.72/CRUD/borrarveh.php";
+    private static final  String URLBorrar = "http://192.168.0.7/CRUD/borrarveh.php";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

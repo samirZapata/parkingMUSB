@@ -30,8 +30,8 @@ public class login extends AppCompatActivity {
     TextView btnIrRegistrar;
     String per_usuario1 ="1";
     String per_usuario2 ="2";
-    final static String IP = "192.168.0.7";
-    final static String IPUSB = "172.17.3.72";
+    final static String IP = "172.17.3.158";
+    final static String IPUSB = "192.168.0.7";
     final static String sitio = "CRUD";
     RequestQueue requestQueue;
 
@@ -62,7 +62,8 @@ public class login extends AppCompatActivity {
         bLogin = (Button) findViewById(R.id.btnIniciarSesion);
         btnIrRegistrar = (TextView) findViewById(R.id.btnIrRegistrar);
         btnIrRegistrar.setOnClickListener(v ->
-                registrar());
+                registrar()
+        );
         bLogin.setOnClickListener(v ->
                 loginUsuario("http://"+IPUSB+"/"+sitio+"/"+"login.php?user="+txtUser.getText().toString()+
                         "&pass="+txtPass.getText().toString()));

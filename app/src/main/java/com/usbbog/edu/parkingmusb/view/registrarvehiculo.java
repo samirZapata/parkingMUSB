@@ -25,7 +25,7 @@ public class registrarvehiculo extends AppCompatActivity {
 
     RequestQueue requestQueue;
 
-    private static final  String URLcrear = "http://172.17.3.72/CRUD/cv.php";
+    private static final  String URLcrear = "http://192.168.0.7/CRUD/cv.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -27,7 +27,7 @@ public class modificarUser extends AppCompatActivity {
     Button btnCrear,btnBuscar,btnBorrar,btnEditar;
 
     RequestQueue requestQueue;
-    private static final  String URLEditar = "http://172.17.3.72/CRUD/editUser.php";
+    private static final  String URLEditar = "http://192.168.0.7/CRUD/editUser.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

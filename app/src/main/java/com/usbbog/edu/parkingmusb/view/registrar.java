@@ -26,7 +26,7 @@ public class registrar extends AppCompatActivity {
 
     RequestQueue requestQueue;
 
-    private static final  String URLcrear = "http://172.17.3.72/CRUD/create.php";
+    private static final  String URLcrear = "http://172.17.1.122/CRUD/create.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
